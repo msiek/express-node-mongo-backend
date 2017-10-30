@@ -1,0 +1,16 @@
+{
+  "name": "expressbackend",
+  "version": "1.0.0",
+  "description": "ExpressJS, NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Michael Siek",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.5"
+  }
+}
