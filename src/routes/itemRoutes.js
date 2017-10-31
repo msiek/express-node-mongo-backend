@@ -10,7 +10,7 @@ itemRouter.route('/add/post').post(function (req, res) {
     const item = new Item(req.body);
     item.save()
         .then(item => {
-            res.json('Item added successfully');
+            res.status(200).json({Item: 'Item added successfully'});
         })
         .catch(err => {
             res.status(400).send("unable to save to database");
@@ -19,7 +19,7 @@ itemRouter.route('/add/post').post(function (req, res) {
 
 // Defined get data(index or listing) route
 itemRouter.route('/').get(function (req, res) {
-    Item.find(function (err, itms){
+    Item.find({}, function (err, itms){
         if(err){
             console.log(err);
         }
